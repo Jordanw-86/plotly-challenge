@@ -1,8 +1,4 @@
-// Belly Button Biodiversity - Plotly.js
-//samples.json> got data for names, metadata, samples
-// BONUS: Build the Gauge Chart
-  
-function buildMetadata(sample) {
+  function buildMetadata(sample) {
     d3.json("samples.json").then((data) => {
       var metadata= data.metadata;
       var resultsarray= metadata.filter(sampleobject => 
@@ -21,7 +17,6 @@ function buildMetadata(sample) {
     });
   }
   
-  //function buildGauge(wfreq) {}
   
   function buildCharts(sample) {
   
@@ -36,11 +31,7 @@ function buildMetadata(sample) {
     var labels = result.otu_labels;
     var values = result.sample_values;
   
-  //------------------------------------------------------//
-  //------------------------------------------------------//
-            // Build a BUBBLE Chart 
-  //------------------------------------------------------//
-  //------------------------------------------------------//
+  //Bubble chart
   
     var LayoutBubble = {
       margin: { t: 0 },
@@ -63,12 +54,7 @@ function buildMetadata(sample) {
   
     Plotly.newPlot("bubble", DataBubble, LayoutBubble);
   
-  
-  //---------------------------------------------------------//
-  //---------------------------------------------------------//
-                //  Build a BAR Chart
-  //---------------------------------------------------------//  
-  //---------------------------------------------------------// 
+  //Bar chart
     var bar_data =[
       {
         y:ids.slice(0, 10).map(otuID => `OTU ${otuID}`).reverse(),
