@@ -1,4 +1,4 @@
-# plotly-challenge Belly Button Biodiversity
+# Plotly-challenge - Belly Button Biodiversity - It takes a village
 
 ![Bacteria by filterforge.com](Images/bacteria.jpg)
 
